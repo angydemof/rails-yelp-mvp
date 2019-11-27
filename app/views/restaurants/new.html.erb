@@ -1,0 +1,8 @@
+<%= simple_form_for(@restaurant) do |r| %>
+  <p> <%= r.input :name %></p>
+  <p> <%= r.input :address %></p>
+  <p> <%= r.input :phone_number %></p>
+  <p> <%= r.input :category, collection: Restaurant::CATEGORY %></p>
+  <%= r.submit %>
+  <% end %>
+  <%= link_to "Back to list", restaurants_path %>
